@@ -12,4 +12,6 @@ public class StudentVO {
 	private String stu_gender;
 	private Integer stu_height;
 	private Integer stu_weight;
+	
+	
 }

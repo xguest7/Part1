@@ -11,5 +11,17 @@
 	<select id="aaa" resultType="org.mit.quiz.StudentVO">
 		select * from aaa.student where stu_no=#{stu_no}
 	</select>
+	
+	<select id="bbb" resultType="org.mit.quiz.EMPVO">
+		select * from scott.emp where empno=#{num}
+	</select>
+	
+	<select id="list" resultType="org.mit.quiz.EMPVO">
+		select * from scott.emp
+	</select>
+	
+	<select id="aaalist" resultType="org.mit.quiz.StudentVO">
+		select * from aaa.student
+	</select>
 
 </mapper>   

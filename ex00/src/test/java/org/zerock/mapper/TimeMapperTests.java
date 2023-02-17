@@ -1,7 +1,10 @@
 package org.zerock.mapper;
 
+import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.mit.quiz.EMPVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -30,7 +33,25 @@ public class TimeMapperTests {
 
 	@Test
 	public void testAaa() {
-		log.info(timeMapper.aaa("20153075"));
+		log.info(timeMapper.aaa("20153075 "));
+	}
+	
+	@Test
+	public void testBbb() {
+		log.info("결과값"+timeMapper.bbb("7369"));
+	}
+	
+	@Test
+	public void testList() {
+		List<EMPVO> list =timeMapper.list();
+		for(EMPVO vo :list) {
+			log.info(vo);
+		}
+	}
+	
+	@Test
+	public void testAaaList() {
+		log.info(timeMapper.aaalist());
 	}
 	
 }
