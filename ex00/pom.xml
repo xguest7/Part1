@@ -14,6 +14,13 @@
 		<org.slf4j-version>1.6.6</org.slf4j-version>
 	</properties>
 	<dependencies>
+		<!-- 히카리CP 추가 -->
+		<dependency>
+	   	<groupId>com.zaxxer</groupId>
+		   <artifactId>HikariCP</artifactId>
+		   <version>2.7.4</version>
+		</dependency>
+	
 		<!-- 오라클 접속용  -->
 		<dependency>
 		    <groupId>com.oracle.database.jdbc</groupId>

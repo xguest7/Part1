@@ -10,4 +10,20 @@
 	<context:component-scan base-package="org.zerock.sample" />
 	<context:component-scan base-package="org.mit.quiz" />
 	
+	<!--히카리 CP 초기화-->
+	<!--  id는 객체 이름 class는 class-->
+	<bean id="bbb" class="com.zaxxer.hikari.HikariConfig">
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:XE"></property>
+		<property name="username" value="book_ex"></property>
+		<property name="password" value="book_ex"></property>
+	</bean>
+	
+	<!-- HikariDataSource는 DataSource 인터페이스를 구현한 클래스이다.  -->
+	<bean id="aaa" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+		<constructor-arg ref="bbb"/>
+	</bean>
+	
 </beans>
+
+
