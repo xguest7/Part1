@@ -52,6 +52,7 @@ public class TimeMapperTests {
 	@Test
 	public void testAaaList() {
 		log.info(timeMapper.aaalist());
+		
 	}
 	
 }
